@@ -1,0 +1,21 @@
+
+version: "3.3"
+
+services:
+  mitre:
+    build: mitre/.
+    container_name: mitre
+    ports:
+    - "4200:4200"
+
+  chef:
+    build: cyberchef/.
+    container_name: chef
+    ports:
+    - "8000:8000"
+
+  jsoncrack:
+    build: jsoncrack/.
+    container_name: jsoncrack
+    ports:
+      - "9000:8080"
